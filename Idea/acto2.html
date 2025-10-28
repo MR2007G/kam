@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acto II: Felicidad y aprendizaje </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="story-page fourth-theme">
+
+    <audio autoplay loop id="musica-base" src="audio/cancion.mp3"  ></audio>
+    
+    <div class="navigation-menu">
+        <a href="acto1.html" class="nav-button" data-act="acto1">Acto I: Amigos </a>
+        <a href="acto2.html" class="nav-button nav-active" data-act="acto2">Acto II: Felicidad y aprendizaje</a>
+        <a href="acto3.html" class="nav-button" data-act="acto3">Acto III: El Fin </a>
+        <a href="final.html" class="nav-button nav-disabled">Mensaje Final</a>
+    </div>
+
+    <section id="acto2" class="story-section acto2-layout">
+        <h2>Acto II: El año que Crecimos Juntos.</h2>
+        <p class="section-description">
+            Este año nos demostró que somos un equipo invencible. Juntos no hay obstáculo que no podamos superar.
+        </p>
+
+        <div class="acto2-grid">
+            
+            <div class="message-container">
+                <div class="memory-card">
+                    <img src="images/pelea1.jpg" alt="Tarjeta de recuerdo">
+                    <h3>Un mensaje para la mejor compañera que pude haber tenido al final de esta etapa. </h3>
+                </div>
+                
+                <button id="showStoryBtn" class="main-btn" style="margin-top: 20px;">
+                    💌 Abrir mensaje oculto
+                </button>
+                
+                <div id="hiddenStoryArea" class="hidden-story-area">
+                    <h3>¡Solo para ti!</h3>
+                    <p>
+                        Este video me recuerda cuánto nos divertimos juntos. Cada vez que lo veo, me doy cuenta de que 
+                        eres la persona más especial del mundo. Recuerdo que el inicio de nuestra relación fue algo realmente hermoso, éramos 
+                        solo usted y yo sin nadie que se meta hasta que llegamos al colegio a compartir con todo el mundo y gracias a mi todo
+                        se empezó a ir un poco a la mierda. Cuarto año aunque fue uno de mis mejores años en el colegio gracias a usted y todo
+                        lo que viví contigo, hubo días que tuvimos problemas un poco fuertes por mi idiotez e inmadurez, pasamos por muchos conflictos con terceros por mi culpa
+                        y varios problemas entre nosotros también por mi culpa, aprovecho para volver a pedirte perdón por en esa época ser 
+                        desleal hacia ti, por ser inmaduro, ser inseguro y no saber lo que era una relación. Superamos todos los problemas 
+                        después de varios días feos y sinceramente desde todos esos problemas yo no tuve a partir de ahí ninguna duda que 
+                        usted y yo juntos y concentrándonos solo en el problema podriamos estar juntos siempre, aprendí y me enseñaste 
+                        muchísimas cosas ese año, espero que de mí usted también se haya llevado algo más que solo los buenos o malos recuerdos, 
+                        de pana gracias kami por ser la persona más importante en mi vida en ese momento y obviamente ahora también, por todos 
+                        los exámenes que nos copiamos ese año, todas las risas, las salidas, las convivencias, los abrazos, los te amo, los 
+                        recreos, los besos escondidos, los almuerzos juntos, el abrazo después de cogernos a enrique en un examen, 
+                        gracias por ser mi compañera de vida en ese momento y por hacerme tan feliz todos los días que pudimos estarlos y 
+                        perdón otra vez por todas esas veces en donde yo la cagaba y estábamos peleados, hoy en día de verdad no sabes cuánto 
+                        añoraría tenerte un minuto  como en ese momento, fue una de las mejores épocas de mi vida que jamás se me olvidará 
+                        nada, gracias de verdad por todo. (perdón si el video se mal cuando abres esto, no supe programarlo bien)
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="video-background-box">
+                <video autoplay muted loop class="full-video" poster="images/poster_video.jpg">
+                    <source src="videos/finalv.mp4"   type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

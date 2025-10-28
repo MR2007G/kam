@@ -1,0 +1,438 @@
+/* --- 1. ESTILOS BASE Y GENERALES --- */
+:root {
+    --color-primary: #588da8; 
+    --color-secondary: #f75d93; /* Rosa vibrante para acento */
+    --color-bg-base: #f7f3f0;
+    --color-bg-card: white;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-bg-base);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 50px; /* Espacio para la navegación fija */
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.story-section {
+    padding: 80px 5%;
+    min-height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-out; /* Crucial para que el salto sea suave */
+}
+
+/* --- 2. NAVEGACIÓN (Fija en la parte superior) --- */
+.navigation-menu {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.nav-active, .nav-button:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.nav-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+/* --- 3. PÁGINA DE ENTRADA (HERO) Y COLLAGE --- */
+.hero-section {
+    height: calc(100vh - 50px);
+    /* Fondo con 3 collages repetidos */
+    background-image: url('images/collage.jpg'), url('images/collage.jpg'), url('images/collage.jpg'); 
+    background-size: 33.333% 100%, 33.333% 100%, 33.333% 100%; 
+    background-position: left center, center center, right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 30px 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+
+/* --- ESTILO PARA EL MENSAJE DE LA MÚSICA --- */
+.music-tip {
+    position: absolute;
+    bottom: 10px;        
+    right: 15px;         
+    font-size: 0.85em;
+    color: #ffcccc;      
+    opacity: 0.8;
+    font-style: italic;
+    text-shadow: none;   
+}
+
+
+/* Diseño del Botón "Comenzar el Viaje" */
+#startButton {
+    background-color: var(--color-secondary); 
+    color: white;
+    border: 3px solid white;
+    padding: 18px 45px;
+    font-size: 1.5em;
+    border-radius: 50px; 
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    animation: pulse 2s infinite; 
+}
+
+#startButton:hover {
+    transform: scale(1.08);
+    background-color: #ff88b8;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+
+/* --- 4. TEMAS VISUALES POR ETAPA --- */
+.primary-theme { background-color: #fce4ec; }
+.fourth-theme { background-color: #e0f2f1; }
+.final-theme { background-color: #fff3e0; }
+
+.section-description {
+    font-style: italic;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+/* --- 5. ACTO I: DISPOSICIÓN DE 3 COLUMNAS (Letras más grandes y con estilo) --- */
+.acto1-layout h2 {
+    font-size: 2.5em; 
+    color: #a82e5f; 
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif; 
+}
+
+.section-description {
+    font-style: italic;
+    max-width: 700px;
+    margin-bottom: 40px;
+    font-size: 1.1em; 
+}
+
+.acto1-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.6fr 1.2fr; 
+    gap: 35px; 
+    max-width: 1300px; 
+    width: 100%;
+    align-items: start;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    border: 4px solid white; 
+}
+
+.text-box {
+    background-color: var(--color-bg-card);
+    padding: 30px; 
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-box h3 {
+    font-size: 1.6em; 
+    color: var(--color-primary);
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.text-box p {
+    font-size: 1.2em; 
+    line-height: 1.8; 
+    font-family: 'Verdana', sans-serif;
+}
+
+/* --- 6. ACTO II: DISEÑO ESPECÍFICO (Mensaje/Video) --- */
+.acto2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: start; 
+    min-height: 600px; 
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+}
+
+.memory-card {
+    background: var(--color-bg-card);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.memory-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.video-background-box {
+    height: 100%;
+    min-height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.full-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ESTILO DEL MENSAJE DESPLEGABLE (ACTO II) */
+.hidden-story-area {
+    position: relative; 
+    width: 100%;
+    padding: 0;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    opacity: 0;
+    max-height: 0; 
+    overflow: hidden;
+    z-index: 50;
+    transition: all 0.7s ease-in-out;
+}
+
+.hidden-story-area.visible {
+    opacity: 1;
+    max-height: 1000px; 
+    padding: 30px;
+    transform: none; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 7. ACTO III: GALERÍA Y BOTONES FINALES --- */
+.photo-gallery-grid-final {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: minmax(150px, auto);
+    gap: 15px;
+    max-width: 1400px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.gallery-item-final {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    grid-column: span 1;
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Mosaico: Algunos elementos ocupan más espacio */
+.gallery-item-final:nth-child(4n) { grid-column: span 2; }
+.gallery-item-final:nth-child(5n) { grid-row: span 2; }
+
+
+/* Vuelve a 'cover' para que no haya espacios blancos dentro de la caja */
+.gallery-item-final img, .gallery-item-final video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Botón "Oye guapa" - Estilo Base */
+.message-toggle-btn {
+    position: absolute;
+    background: rgba(255, 200, 220, 0.8); 
+    color: #a82e5f;
+    border: 2px solid #a82e5f;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+/* Nuevo estilo para centrar el botón en la PARTE INFERIOR */
+.bottom-center-btn {
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    top: auto; 
+}
+
+.message-toggle-btn:hover {
+    background: #a82e5f;
+    color: white;
+}
+
+/* Contenedor del mensaje corto */
+.message-tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+    z-index: 10;
+    text-align: center;
+}
+
+.message-tooltip.visible {
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+/* --- 8. CIERRE Y BOTONES FINALES (SÍ/NO) --- */
+.final-interaction-area {
+    width: 80%;
+    max-width: 800px;
+    padding: 40px;
+    border-top: 2px solid var(--color-primary);
+}
+
+.final-buttons {
+    display: flex;
+    justify-content: space-between; 
+    position: relative; 
+    height: 150px; 
+    align-items: center; /* CLAVE: Alineación vertical al centro */
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.btn-success {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+/* CORRECCIÓN DE ALINEACIÓN DEL BOTÓN NO */
+.btn-danger {
+    background-color: #f44336; 
+    color: white;
+    position: absolute; 
+    right: 0;
+    top: 50%; /* CENTRAR VERTICALMENTE */
+    transform: translateY(-50%); /* CORRECCIÓN PARA CENTRADO PERFECTO */
+}
+
+/* --- 9. PÁGINA FINAL (final.html) - LETRA MÁS GRANDE --- */
+.final-message-page {
+    height: 100vh;
+    padding-top: 50px;
+    background-image: url('images/collage.jpg'), url('images/collage.jpg'), url('images/collage.jpg'); 
+    background-size: 33.333% 100%, 33.333% 100%, 33.333% 100%; 
+    background-position: left center, center center, right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.final-content {
+    background: rgba(0, 0, 0, 0.6); 
+    max-width: 700px;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.25em; /* Tamaño de fuente base más grande */
+}
+
+.final-content h2 {
+    color: white;
+    font-size: 3.5em; /* Título más grande */
+    margin-bottom: 20px;
+}
+
+/* --- 10. ESTILO PARA EL BOTÓN DE AUDIO EN ACTO I/TODOS LOS ACTOS --- */
+.music-control-btn {
+    position: fixed;
+    top: 65px; 
+    right: 20px;
+    z-index: 990;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #a82e5f; 
+    border: 2px solid #ff88b8; 
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music-control-btn:hover {
+    background-color: #ff88b8;
+    color: white;
+    transform: scale(1.05);
+}
